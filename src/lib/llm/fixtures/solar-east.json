@@ -1,0 +1,54 @@
+[
+  {
+    "key": "419bce613e63778f22e08c2585aa28e6b85c217fe0d94036d0da9e8315283d62",
+    "request": "Survey the east-roof solar array at 20 m, stay out of the parking lot",
+    "plan": {
+      "mission_id": "solar-east-plan",
+      "speed_mps": 5,
+      "waypoints": [
+        {
+          "id": "wp1",
+          "lat": 47.3979,
+          "lon": 8.546,
+          "alt_m": 20,
+          "action": "none",
+          "hold_s": 0
+        },
+        {
+          "id": "wp2",
+          "lat": 47.398,
+          "lon": 8.5466,
+          "alt_m": 20,
+          "action": "none",
+          "hold_s": 0
+        },
+        {
+          "id": "wp3",
+          "lat": 47.3981,
+          "lon": 8.54679,
+          "alt_m": 20,
+          "action": "photo",
+          "hold_s": 3
+        },
+        {
+          "id": "wp4",
+          "lat": 47.39825,
+          "lon": 8.547,
+          "alt_m": 20,
+          "action": "none",
+          "hold_s": 0
+        },
+        {
+          "id": "wp5",
+          "lat": 47.3979,
+          "lon": 8.54559,
+          "alt_m": 20,
+          "action": "none",
+          "hold_s": 0
+        }
+      ],
+      "notes": []
+    },
+    "repairs": []
+  }
+]

@@ -1,0 +1,150 @@
+[
+  {
+    "key": "ba168d61d1d3061f96e923ce667c7cef5db1f88eeb49a5704c9866d57a32e789",
+    "request": "Inspect the north roof, stay below 40 m",
+    "plan": {
+      "mission_id": "north-roof-plan",
+      "speed_mps": 5,
+      "waypoints": [
+        {
+          "id": "wp1",
+          "lat": 47.398,
+          "lon": 8.54559,
+          "alt_m": 35,
+          "action": "none",
+          "hold_s": 0
+        },
+        {
+          "id": "wp2",
+          "lat": 47.3986,
+          "lon": 8.54559,
+          "alt_m": 35,
+          "action": "none",
+          "hold_s": 0
+        },
+        {
+          "id": "wp3",
+          "lat": 47.39882,
+          "lon": 8.545594,
+          "alt_m": 35,
+          "action": "photo",
+          "hold_s": 3
+        },
+        {
+          "id": "wp4",
+          "lat": 47.39873,
+          "lon": 8.545,
+          "alt_m": 35,
+          "action": "none",
+          "hold_s": 0
+        },
+        {
+          "id": "wp5",
+          "lat": 47.39873,
+          "lon": 8.5448,
+          "alt_m": 35,
+          "action": "photo",
+          "hold_s": 3
+        },
+        {
+          "id": "wp6",
+          "lat": 47.3988,
+          "lon": 8.5443,
+          "alt_m": 35,
+          "action": "none",
+          "hold_s": 0
+        },
+        {
+          "id": "wp7",
+          "lat": 47.39925117,
+          "lon": 8.5443,
+          "alt_m": 35,
+          "action": "none",
+          "hold_s": 0
+        },
+        {
+          "id": "wp8",
+          "lat": 47.398,
+          "lon": 8.54559,
+          "alt_m": 35,
+          "action": "none",
+          "hold_s": 0
+        }
+      ],
+      "notes": []
+    },
+    "repairs": [
+      {
+        "mission_id": "north-roof-repair-1",
+        "speed_mps": 5,
+        "waypoints": [
+          {
+            "id": "wp1",
+            "lat": 47.398,
+            "lon": 8.54559,
+            "alt_m": 35,
+            "action": "none",
+            "hold_s": 0
+          },
+          {
+            "id": "wp2",
+            "lat": 47.3986,
+            "lon": 8.54559,
+            "alt_m": 35,
+            "action": "none",
+            "hold_s": 0
+          },
+          {
+            "id": "wp3",
+            "lat": 47.39882,
+            "lon": 8.545594,
+            "alt_m": 35,
+            "action": "photo",
+            "hold_s": 3
+          },
+          {
+            "id": "wp4",
+            "lat": 47.39873,
+            "lon": 8.545,
+            "alt_m": 35,
+            "action": "none",
+            "hold_s": 0
+          },
+          {
+            "id": "wp5",
+            "lat": 47.39873,
+            "lon": 8.5448,
+            "alt_m": 35,
+            "action": "photo",
+            "hold_s": 3
+          },
+          {
+            "id": "wp6",
+            "lat": 47.3988,
+            "lon": 8.5443,
+            "alt_m": 35,
+            "action": "none",
+            "hold_s": 0
+          },
+          {
+            "id": "wp7",
+            "lat": 47.399,
+            "lon": 8.5443,
+            "alt_m": 35,
+            "action": "none",
+            "hold_s": 0
+          },
+          {
+            "id": "wp8",
+            "lat": 47.398,
+            "lon": 8.54559,
+            "alt_m": 35,
+            "action": "none",
+            "hold_s": 0
+          }
+        ],
+        "notes": ["Moved wp7 inside the geofence"]
+      }
+    ]
+  }
+]

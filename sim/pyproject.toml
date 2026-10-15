@@ -25,11 +25,11 @@ packages = ["droneos_sim"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "--cov=droneos_sim --cov-report=term-missing --cov-fail-under=80"
+addopts = "--cov=droneos_sim --cov-config=sim/pyproject.toml --cov-report=term-missing --cov-fail-under=80"
 
 [tool.coverage.run]
 # ponytail: sitl.py is a SITL-only runner exercised manually via HUMAN-05, not in CI.
-omit = ["droneos_sim/sitl.py"]
+omit = ["*/droneos_sim/sitl.py"]
 
 [tool.ruff]
 line-length = 100

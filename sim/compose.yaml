@@ -1,0 +1,8 @@
+# PX4 SITL + Gazebo, headless, with camera. Local only: see docs/HUMAN-04 and docs/HUMAN-05.
+services:
+  px4:
+    image: px4io/px4-sitl-gazebo:v1.18.0-rc1
+    network_mode: host
+    environment:
+      HEADLESS: "1"
+      PX4_SIM_MODEL: gz_x500_mono_cam
