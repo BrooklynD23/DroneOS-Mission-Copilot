@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "home": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "lon": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        }
+      },
+      "required": [
+        "lat",
+        "lon"
+      ],
+      "additionalProperties": false
+    },
+    "area": {
+      "minItems": 3,
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lat": {
+            "type": "number",
+            "minimum": -90,
+            "maximum": 90
+          },
+          "lon": {
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
+          }
+        },
+        "required": [
+          "lat",
+          "lon"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "geofence": {
+          "minItems": 3,
+          "maxItems": 100,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "lat": {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              },
+              "lon": {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
+              }
+            },
+            "required": [
+              "lat",
+              "lon"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "no_fly": {
+          "maxItems": 10,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "ring": {
+                "minItems": 3,
+                "maxItems": 100,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "lat": {
+                      "type": "number",
+                      "minimum": -90,
+                      "maximum": 90
+                    },
+                    "lon": {
+                      "type": "number",
+                      "minimum": -180,
+                      "maximum": 180
+                    }
+                  },
+                  "required": [
+                    "lat",
+                    "lon"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "ring"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "ceiling_m": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "min_alt_m": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max_waypoints": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "max_leg_m": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "battery_wh": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "cruise_power_w": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "reserve_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 90
+        }
+      },
+      "required": [
+        "geofence",
+        "no_fly",
+        "ceiling_m",
+        "min_alt_m",
+        "max_waypoints",
+        "max_leg_m",
+        "battery_wh",
+        "cruise_power_w",
+        "reserve_pct"
+      ],
+      "additionalProperties": false
+    },
+    "pois": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "lat": {
+            "type": "number",
+            "minimum": -90,
+            "maximum": 90
+          },
+          "lon": {
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
+          },
+          "radius_m": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "lat",
+          "lon",
+          "radius_m"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "preset_requests": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 500
+      }
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "home",
+    "area",
+    "constraints",
+    "pois",
+    "preset_requests"
+  ],
+  "additionalProperties": false
+}

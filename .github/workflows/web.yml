@@ -20,6 +20,8 @@ jobs:
         run: pnpm lint
       - name: Unit tests
         run: pnpm test
+      - name: Schema export drift check
+        run: pnpm schema:export && git diff --exit-code schemas/
       - name: Build
         run: pnpm build
       - name: Install Playwright chromium

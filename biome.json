@@ -20,7 +20,8 @@
       "!public/replays",
       "!coverage",
       "!playwright-report",
-      "!test-results"
+      "!test-results",
+      "!visuals"
     ]
   },
   "formatter": {

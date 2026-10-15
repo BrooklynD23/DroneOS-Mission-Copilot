@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "scenario_id": {
+      "type": "string"
+    },
+    "mission_id": {
+      "type": "string"
+    },
+    "generated_by": {
+      "type": "string",
+      "enum": [
+        "template",
+        "claude-haiku-5-5"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "poi_id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "observed",
+              "abstained"
+            ]
+          },
+          "evidence": {
+            "maxItems": 3,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "frame_id": {
+                  "type": "string"
+                },
+                "t_s": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "lat": {
+                  "type": "number",
+                  "minimum": -90,
+                  "maximum": 90
+                },
+                "lon": {
+                  "type": "number",
+                  "minimum": -180,
+                  "maximum": 180
+                },
+                "alt_m": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "frame_id",
+                "t_s",
+                "lat",
+                "lon",
+                "alt_m"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "caption": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "abstain_reason": {
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "poi_id",
+          "label",
+          "status",
+          "evidence",
+          "caption"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "scenario_id",
+    "mission_id",
+    "generated_by",
+    "findings"
+  ],
+  "additionalProperties": false
+}
