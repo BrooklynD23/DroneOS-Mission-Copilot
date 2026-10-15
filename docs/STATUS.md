@@ -4,7 +4,7 @@
 |---|---|---|
 | WAVE-00 bootstrap | passed | gate ok 2026-10-14 @0a3b615 (r2, .gitignore .coverage fix) |
 | WAVE-01 contracts-and-shell | passed | gate ok 2026-10-14 @2ca33d5 |
-| WAVE-02 core-logic | todo | — |
+| WAVE-02 core-logic | passed | gate ok 2026-10-15 @da0c9e8 (r2) |
 | WAVE-03 llm-repair-report-sim | todo | — |
 | WAVE-04 api-and-replays | todo | — |
 | WAVE-05 ui-components | todo | — |
