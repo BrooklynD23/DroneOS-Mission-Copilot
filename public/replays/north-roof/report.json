@@ -1,0 +1,73 @@
+{
+  "scenario_id": "north-roof",
+  "mission_id": "north-roof-repair-1",
+  "generated_by": "template",
+  "findings": [
+    {
+      "poi_id": "roof-hatch-n",
+      "label": "Roof hatch N",
+      "status": "observed",
+      "evidence": [
+        {
+          "frame_id": "000038",
+          "t_s": 38,
+          "lat": 47.39881994254577,
+          "lon": 8.545593998955377,
+          "alt_m": 35
+        },
+        {
+          "frame_id": "000039",
+          "t_s": 39,
+          "lat": 47.39882,
+          "lon": 8.545594,
+          "alt_m": 35
+        },
+        {
+          "frame_id": "000040",
+          "t_s": 40,
+          "lat": 47.39882,
+          "lon": 8.545594,
+          "alt_m": 35
+        }
+      ],
+      "caption": "Roof hatch N seen in frames 000038, 000039, 000040 at 35 m"
+    },
+    {
+      "poi_id": "solar-array",
+      "label": "Solar array",
+      "status": "observed",
+      "evidence": [
+        {
+          "frame_id": "000054",
+          "t_s": 54,
+          "lat": 47.39873,
+          "lon": 8.5448,
+          "alt_m": 35
+        },
+        {
+          "frame_id": "000055",
+          "t_s": 55,
+          "lat": 47.39873,
+          "lon": 8.5448,
+          "alt_m": 35
+        },
+        {
+          "frame_id": "000056",
+          "t_s": 56,
+          "lat": 47.39873,
+          "lon": 8.5448,
+          "alt_m": 35
+        }
+      ],
+      "caption": "Solar array seen in frames 000054, 000055, 000056 at 35 m"
+    },
+    {
+      "poi_id": "hvac-3",
+      "label": "HVAC 3",
+      "status": "abstained",
+      "evidence": [],
+      "caption": "",
+      "abstain_reason": "no frame within 15 m"
+    }
+  ]
+}

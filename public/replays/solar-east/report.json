@@ -1,0 +1,36 @@
+{
+  "scenario_id": "solar-east",
+  "mission_id": "solar-east-plan",
+  "generated_by": "template",
+  "findings": [
+    {
+      "poi_id": "solar-east",
+      "label": "East-roof solar array",
+      "status": "observed",
+      "evidence": [
+        {
+          "frame_id": "000031",
+          "t_s": 31,
+          "lat": 47.39810008681376,
+          "lon": 8.546790121539265,
+          "alt_m": 20
+        },
+        {
+          "frame_id": "000028",
+          "t_s": 28,
+          "lat": 47.3981,
+          "lon": 8.54679,
+          "alt_m": 20
+        },
+        {
+          "frame_id": "000029",
+          "t_s": 29,
+          "lat": 47.3981,
+          "lon": 8.54679,
+          "alt_m": 20
+        }
+      ],
+      "caption": "East-roof solar array seen in frames 000031, 000028, 000029 at 20 m"
+    }
+  ]
+}
