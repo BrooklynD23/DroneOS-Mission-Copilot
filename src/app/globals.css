@@ -1,0 +1,23 @@
+:root {
+  --color-bg: #0f1419;
+  --color-fg: #e6e9ee;
+  --color-muted: #9aa4b0;
+  --color-accent: #4ea1ff;
+  --color-danger: #ff5f56;
+  --color-ok: #3fb950;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --font-size-base: 18px;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
