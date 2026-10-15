@@ -1,0 +1,62 @@
+{
+  "id": "north-roof",
+  "title": "North roof inspection",
+  "home": { "lat": 47.397742, "lon": 8.545594 },
+  "area": [
+    { "lat": 47.39855048, "lon": 8.54453233 },
+    { "lat": 47.39855048, "lon": 8.54745192 },
+    { "lat": 47.39908947, "lon": 8.54745192 },
+    { "lat": 47.39908947, "lon": 8.54453233 }
+  ],
+  "constraints": {
+    "geofence": [
+      { "lat": 47.39684369, "lon": 8.54360337 },
+      { "lat": 47.39684369, "lon": 8.54758463 },
+      { "lat": 47.39908947, "lon": 8.54758463 },
+      { "lat": 47.39908947, "lon": 8.54360337 }
+    ],
+    "no_fly": [
+      {
+        "id": "parking-lot",
+        "name": "Parking lot",
+        "ring": [
+          { "lat": 47.39693352, "lon": 8.54639025 },
+          { "lat": 47.39693352, "lon": 8.54745192 },
+          { "lat": 47.39756234, "lon": 8.54745192 },
+          { "lat": 47.39756234, "lon": 8.54639025 }
+        ]
+      }
+    ],
+    "ceiling_m": 40,
+    "min_alt_m": 5,
+    "max_waypoints": 50,
+    "max_leg_m": 400,
+    "battery_wh": 77,
+    "cruise_power_w": 350,
+    "reserve_pct": 25
+  },
+  "pois": [
+    {
+      "id": "roof-hatch-n",
+      "label": "Roof hatch N",
+      "lat": 47.39881997,
+      "lon": 8.545594,
+      "radius_m": 15
+    },
+    {
+      "id": "solar-array",
+      "label": "Solar array",
+      "lat": 47.39873014,
+      "lon": 8.54479775,
+      "radius_m": 20
+    },
+    {
+      "id": "hvac-3",
+      "label": "HVAC 3",
+      "lat": 47.39899964,
+      "lon": 8.5471865,
+      "radius_m": 15
+    }
+  ],
+  "preset_requests": ["Inspect the north roof, stay below 40 m"]
+}

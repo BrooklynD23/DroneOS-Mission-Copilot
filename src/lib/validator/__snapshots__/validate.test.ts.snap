@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`validate: stats and ordering > snapshots stats of one case 1`] = `
+{
+  "flight_s": 26,
+  "reserve": 97,
+  "route_m": 40,
+}
+`;

@@ -1,0 +1,9 @@
+{"t_s": 0, "ts": "2026-10-14T12:00:00Z", "lat": 47.397742, "lon": 8.545594, "alt_m": 0, "battery_pct": 100, "mode": "TAKEOFF", "frame_id": "000001"}
+{"t_s": 2, "ts": "2026-10-14T12:00:02Z", "lat": 47.397742, "lon": 8.545594, "alt_m": 15, "battery_pct": 99.5, "mode": "TAKEOFF"}
+{"t_s": 4, "ts": "2026-10-14T12:00:04Z", "lat": 47.3981013, "lon": 8.545594, "alt_m": 30, "battery_pct": 99, "mode": "MISSION"}
+{"t_s": 6, "ts": "2026-10-14T12:00:06Z", "lat": 47.3974725, "lon": 8.5466557, "alt_m": 70, "battery_pct": 98.5, "mode": "MISSION", "frame_id": "000002"}
+{"t_s": 8, "ts": "2026-10-14T12:00:08Z", "lat": 47.3972928, "lon": 8.5469211, "alt_m": 70, "battery_pct": 98, "mode": "MISSION"}
+{"t_s": 10, "ts": "2026-10-14T12:00:10Z", "lat": 47.3974725, "lon": 8.5466557, "alt_m": 30, "battery_pct": 97.5, "mode": "MISSION"}
+{"t_s": 12, "ts": "2026-10-14T12:00:12Z", "lat": 47.3979217, "lon": 8.5461912, "alt_m": 30, "battery_pct": 97, "mode": "RTL"}
+{"t_s": 14, "ts": "2026-10-14T12:00:14Z", "lat": 47.397742, "lon": 8.545594, "alt_m": 25, "battery_pct": 96.5, "mode": "RTL"}
+{"t_s": 18, "ts": "2026-10-14T12:00:18Z", "lat": 47.397742, "lon": 8.545594, "alt_m": 0, "battery_pct": 96, "mode": "LAND"}

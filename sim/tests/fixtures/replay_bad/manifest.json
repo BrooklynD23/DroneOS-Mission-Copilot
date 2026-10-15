@@ -1,0 +1,8 @@
+{
+  "scenario_id": "sim-test",
+  "source": "synthetic",
+  "created": "2026-10-14T12:00:00Z",
+  "frame_ext": "svg",
+  "frame_count": 2,
+  "duration_s": 18
+}

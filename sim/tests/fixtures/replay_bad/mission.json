@@ -1,0 +1,23 @@
+{
+  "mission_id": "m-sim-bad",
+  "speed_mps": 8,
+  "waypoints": [
+    {
+      "id": "wp1",
+      "lat": 47.39882,
+      "lon": 8.545594,
+      "alt_m": 30,
+      "action": "photo",
+      "hold_s": 5
+    },
+    {
+      "id": "wp2",
+      "lat": 47.3981013,
+      "lon": 8.5467884,
+      "alt_m": 30,
+      "action": "hover",
+      "hold_s": 3
+    }
+  ],
+  "notes": ["synthetic bad mission"]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "solar-east",
+  "title": "East-roof solar survey",
+  "home": { "lat": 47.397742, "lon": 8.545594 },
+  "area": [
+    { "lat": 47.39783183, "lon": 8.54639025 },
+    { "lat": 47.39783183, "lon": 8.5471865 },
+    { "lat": 47.39837082, "lon": 8.5471865 },
+    { "lat": 47.39837082, "lon": 8.54639025 }
+  ],
+  "constraints": {
+    "geofence": [
+      { "lat": 47.39684369, "lon": 8.54360337 },
+      { "lat": 47.39684369, "lon": 8.54758463 },
+      { "lat": 47.39908947, "lon": 8.54758463 },
+      { "lat": 47.39908947, "lon": 8.54360337 }
+    ],
+    "no_fly": [
+      {
+        "id": "parking-lot",
+        "name": "Parking lot",
+        "ring": [
+          { "lat": 47.39693352, "lon": 8.54639025 },
+          { "lat": 47.39693352, "lon": 8.54745192 },
+          { "lat": 47.39756234, "lon": 8.54745192 },
+          { "lat": 47.39756234, "lon": 8.54639025 }
+        ]
+      }
+    ],
+    "ceiling_m": 60,
+    "min_alt_m": 5,
+    "max_waypoints": 50,
+    "max_leg_m": 400,
+    "battery_wh": 77,
+    "cruise_power_w": 350,
+    "reserve_pct": 25
+  },
+  "pois": [
+    {
+      "id": "solar-east",
+      "label": "East-roof solar array",
+      "lat": 47.39810132,
+      "lon": 8.54678838,
+      "radius_m": 20
+    }
+  ],
+  "preset_requests": [
+    "Survey the east-roof solar array at 20 m, stay out of the parking lot"
+  ]
+}
