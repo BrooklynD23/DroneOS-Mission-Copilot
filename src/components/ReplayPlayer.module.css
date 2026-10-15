@@ -1,0 +1,17 @@
+.player {
+  display: grid;
+  gap: var(--space-sm);
+}
+.source {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.scrub {
+  width: 100%;
+}
+.controls {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+}

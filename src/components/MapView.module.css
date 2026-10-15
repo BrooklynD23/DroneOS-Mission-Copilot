@@ -1,0 +1,29 @@
+.map {
+  width: 100%;
+  height: 420px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+.wp {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--focus);
+  background: var(--bg);
+  color: var(--fg);
+  font:
+    600 11px / 1 system-ui,
+    sans-serif;
+}
+.bad {
+  border-color: var(--bad);
+  color: var(--bad);
+}
+.drone {
+  font-size: 22px;
+  line-height: 1;
+  filter: drop-shadow(0 0 2px var(--bg));
+}

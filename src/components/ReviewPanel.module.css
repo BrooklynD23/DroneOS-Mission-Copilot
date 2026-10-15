@@ -1,0 +1,54 @@
+.panel {
+  display: grid;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.summary {
+  margin: 0;
+  font-weight: 600;
+}
+.badges {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-xs);
+}
+.ok {
+  color: var(--ok, inherit);
+}
+.bad {
+  color: var(--bad);
+}
+.wps,
+.diff {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.wps caption,
+.diff caption {
+  text-align: left;
+  font-weight: 600;
+}
+.wps th,
+.wps td,
+.diff th,
+.diff td {
+  padding: var(--space-xs);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+.reason {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}

@@ -1,0 +1,32 @@
+.panel {
+  display: grid;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-sm);
+}
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0 var(--space-xs);
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+.chip {
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}

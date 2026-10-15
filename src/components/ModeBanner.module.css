@@ -1,0 +1,14 @@
+.banner {
+  margin: 0;
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.live {
+  color: var(--ok);
+}
+.replay {
+  color: var(--warn);
+}
