@@ -92,7 +92,14 @@ export function MapView(props: MapViewProps) {
         .bindTooltip(p.label)
         .addTo(layers);
     }
-    L.marker([props.home.lat, props.home.lon], { title: "Home" })
+    L.marker([props.home.lat, props.home.lon], {
+      title: "Home",
+      icon: L.divIcon({
+        className: "",
+        iconSize: [24, 24],
+        html: '<div style="font-size:20px;line-height:24px;text-align:center">🏠</div>',
+      }),
+    })
       .bindTooltip("Home")
       .addTo(layers);
     L.polyline(

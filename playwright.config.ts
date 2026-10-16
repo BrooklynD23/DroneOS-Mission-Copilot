@@ -14,7 +14,7 @@ export default defineConfig({
         command: "pnpm build && pnpm start",
         url: "http://localhost:3000",
         timeout: 600_000,
-        reuseExistingServer: !process.env.CI,
+        reuseExistingServer: false,
         env: {
           ANTHROPIC_API_KEY: "",
           DEMO_ACCESS_CODE: "",

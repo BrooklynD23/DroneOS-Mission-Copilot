@@ -1,0 +1,52 @@
+.layout {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    grid-template-rows: auto 1fr;
+  }
+
+  .banner {
+    grid-column: 1 / -1;
+  }
+}
+
+.map {
+  min-height: 20rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.mapLoading {
+  margin: var(--space-md);
+  color: var(--muted);
+}
+
+.panels {
+  display: grid;
+  gap: var(--space-md);
+  align-content: start;
+}
+
+.panel {
+  padding: var(--space-md);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.title {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.1rem;
+}
+
+.body {
+  margin: 0;
+  color: var(--muted);
+}
