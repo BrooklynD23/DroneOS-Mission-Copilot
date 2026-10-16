@@ -8,7 +8,7 @@
 | WAVE-03 llm-repair-report-sim | passed | gate ok 2026-10-15 @7ca8b21 (r3) |
 | WAVE-04 api-and-replays | passed | gate ok 2026-10-15 @6d9c53b (r2) |
 | WAVE-05 ui-components | passed | gate ok 2026-10-15 @051191b (r2) |
-| WAVE-06 integration | todo | — |
+| WAVE-06 integration | passed | gate ok 2026-10-15 @447a4c0 |
 | WAVE-07 e2e-deploy-release | todo | — |
 
 | Human doc | Status |
