@@ -1,0 +1,62 @@
+name: deploy-vercel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check-token:
+    runs-on: ubuntu-latest
+    outputs:
+      available: ${{ steps.check.outputs.available }}
+    steps:
+      # secrets.* is not allowed in job-level `if`, so probe in a step first.
+      - name: Check VERCEL_TOKEN secret
+        id: check
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "::notice::VERCEL_TOKEN secret not set — Vercel deploy skipped."
+            echo "available=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy:
+    needs: check-token
+    if: needs.check-token.outputs.available == 'true'
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      # Optional: pin the target project; without these the CLI deploys to the
+      # token's personal scope under the repo name.
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    outputs:
+      url: ${{ steps.vercel.outputs.url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Deploy to Vercel (production)
+        id: vercel
+        run: |
+          npx vercel@65.0.0 deploy --prod --yes --token="$VERCEL_TOKEN" | tee deploy.log
+          url=$(grep -oE 'https://[A-Za-z0-9.-]+\.vercel\.app' deploy.log | tail -1)
+          if [ -z "$url" ]; then
+            echo "::error::Deploy finished but no production URL found in output"
+            exit 1
+          fi
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+      - name: Print deployment URL
+        run: |
+          echo "::notice::Deployed to ${{ steps.vercel.outputs.url }}"
+          echo "**Deployment URL:** ${{ steps.vercel.outputs.url }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "::notice::Set repo variable DEMO_URL to this URL to enable the deployed-e2e workflow."

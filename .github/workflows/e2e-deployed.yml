@@ -1,0 +1,39 @@
+name: deployed-e2e
+
+on:
+  workflow_dispatch:
+
+jobs:
+  no-url:
+    if: ${{ vars.DEMO_URL == '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: >-
+          echo "::notice::vars.DEMO_URL is not set — set it to the Vercel
+          deployment URL (see deploy-vercel run output), then re-run."
+
+  e2e:
+    if: ${{ vars.DEMO_URL != '' }}
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: ${{ vars.DEMO_URL }}
+      # The deployed site is shared; don't hammer its rate limiter.
+      E2E_SKIP_RATELIMIT: "1"
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Install Playwright chromium
+        run: pnpm exec playwright install --with-deps chromium
+      - name: E2E against deployed site
+        run: pnpm e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report-deployed
+          path: playwright-report/
